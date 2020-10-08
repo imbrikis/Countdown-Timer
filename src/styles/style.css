@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'DigitalFont';
+  src: url('./fonts/square-sans-serif-7.regular.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+table {
+  margin: auto;
+}
+
+table th {
+  padding: 0 5px;
+}
+table td {
+  padding-bottom: 10px;
+}
+
+.countdown-digits {
+  font-size: 64px;
+  font-family: 'DigitalFont', sans-serif;
+}
+
+.digit-descriptors {
+  font-family: 'Manrope', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.new-timer-container, .countdown-timer-container {
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+.new-timer-container {
+  /*background-color: grey;*/
+  min-height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-timer-container {
+  /*background-color: beige;*/
+  min-height: 75%;
+}
+
+.timer-layout {
+  margin-top: 70px;
+  border: 1px solid #ccc;
+  display: inline-block;
+}
+
+.timer-layout:nth-last-child(1) {
+  margin-bottom: 70px;
+}
