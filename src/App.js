@@ -1,12 +1,12 @@
 import React from 'react'
 import NewTimer from './components/NewTimer'
-import CountdownTimers from './components/CountdownTimers'
+import TimersLayout from './components/TimersLayout'
 
 const App = () => {
   return (
     <div className="container">
       <NewTimer />
-      <CountdownTimers />
+      <TimersLayout />
     </div>
     
   )

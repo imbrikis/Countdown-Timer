@@ -1,29 +1,22 @@
 import React from 'react'
 
 const TimerLayout = props => {
-  function x() {
-    return(
-      <div>
-        <p style={{display: "inline"}}>Title: </p><input type="text"/>
-      </div>
-    )
-  }
   return (
-    <div className="timer-layout">
-      <h3>{props.title ? props.title : x()}</h3>
+    <div className="countdown-timer">
+      <h3>{props.title ? props.title : "unnamed event"}</h3>
       <table>
         <tr className="countdown-digits">
           <th>{props.years ? props.years : "00"}</th>
           <th>:</th>
-          <th>{props.months ? props.months : "01"}</th>
+          <th>{props.months ? props.months : "00"}</th>
           <th>:</th>
-          <th>{props.days ? props.days : "22"}</th>
+          <th>{props.days ? props.days : "00"}</th>
           <th>:</th>
-          <th>{props.hours ? props.hours : "03"}</th>
+          <th>{props.hours ? props.hours : "00"}</th>
           <th>:</th>
-          <th>{props.minutes ? props.minutes : "56"}</th>
+          <th>{props.minutes ? props.minutes : "00"}</th>
           <th>:</th>
-          <th>{props.seconds ? props.seconds : "58"}</th>
+          <th>{props.seconds ? props.seconds : "00"}</th>
         </tr>
         <tr className="digit-descriptors">
           <td>YEARS</td>
