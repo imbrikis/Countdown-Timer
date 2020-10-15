@@ -8,40 +8,24 @@ class App extends React.Component {
     this.state = {
       timers : 
         [{
-          title: "My Birthday",
-          years: "00",
-          months: "06",
-          days: "09",
-          hours: "11",
-          minutes: "55",
-          seconds: "34",
+          title: "My birthday",
+          dateTime: "2020-04-11T12:00:00Z",
+          key: 0,
         },
         {
           title: "Album Release Party",
-          years: "02",
-          months: "04",
-          days: "01",
-          hours: "20",
-          minutes: "18",
-          seconds: "09",
+          dateTime: "2021-11-03T10:30:00Z",
+          key: 1,
         },
         {
           title: "Inevitable Death",
-          years: "0027",
-          months: "00",
-          days: "20",
-          hours: "09",
-          minutes: "23",
-          seconds: "07",
+          dateTime: "2074-08-12T21:37:04Z",
+          key: 2,
         },
         {
           title: "The Apocalypse",
-          years: "79",
-          months: "04",
-          days: "23",
-          hours: "04",
-          minutes: "37",
-          seconds: "09",
+          dateTime: "2239-01-29T07:14:57Z",
+          key: 3,
         }]
     }
   }
