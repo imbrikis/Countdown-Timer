@@ -1,6 +1,6 @@
 import React from 'react'
-import NewTimer from './components/NewTimer'
-import TimersLayout from './components/TimersLayout'
+import NewTimer from './NewTimer'
+import TimersLayout from './TimersLayout'
 
 class App extends React.Component {
   constructor(props) {
@@ -9,7 +9,7 @@ class App extends React.Component {
       timers : 
         [{
           title: "My birthday",
-          dateTime: "2020-04-11T12:00:00Z",
+          dateTime: "2021-04-11T12:00:00Z",
           key: 0,
         },
         {

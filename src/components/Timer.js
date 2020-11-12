@@ -12,10 +12,6 @@ const Timer = ({ dateTime, title, year, month, day, hours, minutes, seconds }) =
         <table>
           <thead>
             <tr className="countdown-digits">
-              <th>{year ? year : "00"}</th>
-              <th>:</th>
-              <th>{month ? month : "00"}</th>
-              <th>:</th>
               <th>{day ? day : "00"}</th>
               <th>:</th>
               <th>{hours ? hours : "00"}</th>
@@ -27,10 +23,6 @@ const Timer = ({ dateTime, title, year, month, day, hours, minutes, seconds }) =
           </thead>
           <tbody>
             <tr className="digit-descriptors">
-              <td>YEARS</td>
-              <td></td>
-              <td>MONTHS</td>
-              <td></td>
               <td>DAYS</td>
               <td></td>
               <td>HOURS</td>

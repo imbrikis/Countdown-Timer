@@ -1,6 +1,6 @@
 import React from 'react'
 
-const newTimer = () => {
+const NewTimer = () => {
   return (
     <div className="countdown-timers-container">
       <div className="countdown-timer-div">
@@ -12,10 +12,6 @@ const newTimer = () => {
           <table>
             <thead>
               <tr className="countdown-digits">
-                <th>{"----"}</th>
-                <th>:</th>
-                <th>{"--"}</th>
-                <th>:</th>
                 <th>{"--"}</th>
                 <th>:</th>
                 <th>{"--"}</th>
@@ -27,10 +23,6 @@ const newTimer = () => {
             </thead>
             <tbody>
               <tr className="digit-descriptors">
-                <td>YEARS</td>
-                <td></td>
-                <td>MONTHS</td>
-                <td></td>
                 <td>DAYS</td>
                 <td></td>
                 <td>HOURS</td>
@@ -54,4 +46,4 @@ const newTimer = () => {
   )
 }
 
-export default newTimer
+export default NewTimer

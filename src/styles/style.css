@@ -54,9 +54,9 @@ html {
 }
 
 .countdown, .controls, .new-timer {
-  border: 1px solid rgb(121, 120, 120);
+  border: 1px solid rgb(158, 158, 158);
   box-shadow: 5px 5px 8px #1b1919;
-  background-color: rgb(189, 189, 189);
+  background-color: rgb(219, 219, 219);
 }
 
 .controls {
@@ -72,11 +72,12 @@ html {
 
 .control-button:hover {
   border: 1px solid rgb(153, 153, 153);
-  background-color: rgb(231, 231, 231);
+  background-color: #92cef7;
 }
 
 .control-button:active {
   box-shadow: 3px 3px 6px #1a1818;
+  background-color: #6dc5ff;
 }
 
 i {
