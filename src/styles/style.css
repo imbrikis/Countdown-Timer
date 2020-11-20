@@ -6,13 +6,127 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #ffbc58;
+}
+
+.container {
+  width: 100%;
+}
+
+.new-timer-container, .countdown-timers-container {
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.new-timer-container, .new-timer, .countdown-timers-container {
+  width: 80%;
+} 
+
+.new-timer {
+  display: inline-block;
+  padding: 15px 0;
+  margin-top: 20px;
+}
+
+.countdown-timer-div {
+  position: relative;
+  margin-top: 70px;
+  width: 100%;
+  height: 180px;
+}
+
+.controls-div {
+  width: 10%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.countdown {
+  width: 80%;
+  height: 100%;
+  float: left;
+}
+
+.countdown, .controls, .new-timer {
+  border: 1px solid rgb(158, 158, 158);
+  box-shadow: 5px 5px 8px #1b1919;
+  background-color: rgb(219, 219, 219);
+}
+
+.controls {
+  width: 60px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.control-button:hover {
+  border: 1px solid rgb(153, 153, 153);
+  background-color: #92cef7;
+}
+
+.control-button:active {
+  box-shadow: 3px 3px 6px #1a1818;
+  background-color: #6dc5ff;
+}
+
+i {
+  padding: 12px 0;
+}
+
+i.icon {
+  margin: 0;
+}
+
+.control-left-middle {
+  position: relative;
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
+
+.controls-top-left, .controls-top-right {
+  top: 0;
+}
+
+.controls-bottom-left, .controls-bottom-right {
+  bottom: 0;
+}
+
+button {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.2em;
+  text-align: center;
 }
 
 h3 {
   text-align: center;
   font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  margin-bottom: 10px;;
+  letter-spacing: 0.1em;
+}
+
+form label, input {
   font-size: 20px;
-  margin: 10px 0;
+  margin-bottom: 10px;
 }
 
 table {
@@ -26,8 +140,9 @@ table td {
   padding-bottom: 10px;
 }
 
-.countdown-digits {
-  font-size: 64px;
+.datetime-selector {
+  width: 99%;
+  font-size: 48px;
   font-family: 'DigitalFont', sans-serif;
 }
 
@@ -36,37 +151,11 @@ table td {
   letter-spacing: 0.1em;
 }
 
-.container {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.countdown-digits {
+  font-size: 64px;
+  font-family: 'DigitalFont', sans-serif;
 }
 
-.new-timer-container, .countdown-timer-container {
-  margin: auto;
-  width: 70%;
-  text-align: center;
-}
-
-.new-timer-container {
-  /*background-color: grey;*/
-  min-height: 25%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.countdown-timer-container {
-  /*background-color: beige;*/
-  min-height: 75%;
-}
-
-.timer-layout {
-  margin-top: 70px;
-  border: 1px solid #ccc;
-  display: inline-block;
-}
-
-.timer-layout:nth-last-child(1) {
+.countdown-timer-div:nth-last-child(1) {
   margin-bottom: 70px;
 }
