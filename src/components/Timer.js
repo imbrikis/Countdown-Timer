@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Timer = ({ dateTime, title, year, month, day, hours, minutes, seconds }) => {
+const Timer = ({ dateTime, title, day, hours, minutes, seconds }) => {
   return (
     <div className="countdown-timer-div">
       <div className="controls-div">

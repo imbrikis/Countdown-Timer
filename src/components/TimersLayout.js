@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Timer from './Timer'
 
-const TimersLayout = props => {
+const TimersLayout = ({ timers }) => {
 
+  const [timersArray, setTimersArray] = useState(timers)
+
+  // sets the hours, minutes, and seconds to 2 digits (prepends a zero if needed)
   const formatDateTimeFields = d => {
     var x = d.toString().split("")
     x.unshift("0")
@@ -10,40 +13,35 @@ const TimersLayout = props => {
     return result
   }
 
-  const countdown = (futureDate) => {
-    let result = (new Date(futureDate).getTime()) - (new Date().getTime())
-    let timerItems = {
-      days: Math.floor(result / 86400000), 
-      hours: Math.floor(result / 3600000) % 60, 
-      minutes: Math.floor(result / 60000) % 60, 
-      seconds: Math.floor(result / 1000) % 60}
-      return timerItems
+  // updates the timers
+  const countdown = arr => {
+    let tempArray = arr
+    tempArray.map(item => {
+      let result = (new Date(item.dateTime).getTime()) - (new Date().getTime())
+      item.days = Math.floor(result / 86400000);
+      item.hours = formatDateTimeFields(Math.floor(result / 3600000) % 60);
+      item.minutes = formatDateTimeFields(Math.floor(result / 60000) % 60); 
+      item.seconds = formatDateTimeFields(Math.floor(result / 1000) % 60);
+    })
+    setTimersArray([...tempArray])
   }
+
+  // runs the countdown function to update the timers every second
+  setInterval(() => countdown(timersArray), 500)
 
   return (
     <div className="countdown-timers-container">
       {
-        props.timers.map(item => {
-          let diff = countdown(item.dateTime)
-          console.log(diff)
-    
-          let dateTime = new Date(item.dateTime)
-          let key = item.key
-          let title = item.title
-          let day = diff.days
-          let hours = formatDateTimeFields(diff.hours)
-          let minutes = formatDateTimeFields(diff.minutes)
-          let seconds = formatDateTimeFields(diff.seconds)
-    
+        timersArray.map(item => {
           return (
             <Timer 
-              dateTime={dateTime}
-              title={title}
-              day={day}
-              hours={hours}
-              minutes={minutes}
-              seconds={seconds}
-              key={key}
+              dateTime={new Date(item.dateTime)}
+              title={item.title}
+              day={item.days}
+              hours={item.hours}
+              minutes={item.minutes}
+              seconds={item.seconds}
+              key={item.key}
             />
           )
         })
